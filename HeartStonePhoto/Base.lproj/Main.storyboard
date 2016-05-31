@@ -1,89 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aQO-kK-d0E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mwG-3e-uA9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="eBb-44-ji0">
+        <!--photos-->
+        <scene sceneID="16G-JX-EvJ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aQO-kK-d0E" sceneMemberID="viewController">
+                <tableViewController title="photos" id="xLl-Jr-ege" customClass="MainTableViewController" customModule="HeartStonePhoto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="yVo-tb-zOe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="AmN-ge-0Pz">
+                                <rect key="frame" x="0.0" y="92" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AmN-ge-0Pz" id="tpp-Hu-bnd">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xLl-Jr-ege" id="zok-Le-wDW"/>
+                            <outlet property="delegate" destination="xLl-Jr-ege" id="inm-LC-sFe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="photos" id="bLV-Nr-weG">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="QQ3-j9-0Ej">
+                            <connections>
+                                <action selector="selectImageFromLibrary:" destination="xLl-Jr-ege" id="uJy-PV-oJL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ayC-7o-8nY">
+                            <connections>
+                                <action selector="TakePhoto:" destination="xLl-Jr-ege" id="bli-hk-JBz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W75-rV-nZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="892"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uBS-HF-Qwh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mwG-3e-uA9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ad7-Gk-2zc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nlv-3o-JUM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="M28-CB-SOA" kind="relationship" relationship="rootViewController" id="HG0-LF-J1l"/>
+                        <segue destination="xLl-Jr-ege" kind="relationship" relationship="rootViewController" id="8Sw-aN-K5P"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cTT-KA-DiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAg-Le-Otz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="900"/>
-        </scene>
-        <!--Photos-->
-        <scene sceneID="hoN-9Y-3RL">
-            <objects>
-                <collectionViewController id="M28-CB-SOA" customClass="MainCollectionViewController" customModule="HeartStonePhoto" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ebz-s9-pfB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lHC-yC-f1s">
-                            <size key="itemSize" width="120" height="120"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="8UV-s7-Gw7" customClass="PhotoCollectionViewCell" customModule="HeartStonePhoto" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="120" height="120"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="89L-Xo-IP1">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                        </imageView>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <constraints>
-                                    <constraint firstItem="89L-Xo-IP1" firstAttribute="top" secondItem="8UV-s7-Gw7" secondAttribute="topMargin" id="9gj-15-h5R"/>
-                                    <constraint firstItem="89L-Xo-IP1" firstAttribute="leading" secondItem="8UV-s7-Gw7" secondAttribute="leadingMargin" id="J9O-LK-lON"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="89L-Xo-IP1" secondAttribute="bottom" id="JUA-gC-3DH"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="89L-Xo-IP1" secondAttribute="trailing" id="j7s-t7-sQe"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="Image" destination="89L-Xo-IP1" id="PWM-YM-zzu"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="M28-CB-SOA" id="2bX-pM-Ah4"/>
-                            <outlet property="delegate" destination="M28-CB-SOA" id="20f-BE-PxY"/>
-                        </connections>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Photos" id="pMG-u2-hqS">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="0F0-4M-0Z6">
-                            <connections>
-                                <action selector="selectImageFromLibrary:" destination="M28-CB-SOA" id="HPp-Iz-kpZ"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="ei8-Fu-ppC">
-                            <connections>
-                                <action selector="TakePhoto:" destination="M28-CB-SOA" id="bbt-AD-NOA"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MgG-XM-FiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1020" y="897"/>
+            <point key="canvasLocation" x="1051" y="892"/>
         </scene>
     </scenes>
 </document>
