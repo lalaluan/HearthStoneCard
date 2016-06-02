@@ -12,6 +12,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
 
     var photos = [Photo]()
     
+    let pendingOperations = PendingOperations()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,15 +166,47 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     
     
     // MARK:NSCording
-    func savePhotos() {
+    /*func savePhotos() {
         
         let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(photos, toFile: Photo.contentURL.path!)
         
         if !isSuccessfulSave {
             print("Failed to save meals...")
         }
+    }*/
+    
+    func savePhotos(){
+        // use the index 0 for saving
+        let index = NSIndexPath(index: 0)
+        //1
+        if (pendingOperations.loadSaveProgress[index]) != nil {
+            return
+        }
+        
+        //2
+        let saver = PhotoSaver(photos: photos)
+        
+        //3
+        saver.completionBlock = {
+            if saver.cancelled {
+                return
+            }
+            dispatch_async(dispatch_get_main_queue(), {
+                self.pendingOperations.loadSaveProgress.removeValueForKey(index)
+                
+                self.tableView.reloadData()
+                //self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            })
+        }
+        //4
+        pendingOperations.loadSaveProgress[index] = saver
+        
+        //5
+        pendingOperations.loadSaveQueue.addOperation(saver)
     }
     
+    
+    // currently we needn't multi-thread for loading
     func loadPhotos() -> [Photo]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Photo.contentURL.path!) as? [Photo]
     }

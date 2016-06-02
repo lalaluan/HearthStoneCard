@@ -41,3 +41,30 @@ class Photo : NSObject, NSCoding{
     
     
 }
+
+
+class PhotoSaver: NSOperation {
+    //1
+    let photos: [Photo]
+    
+    //2
+    init(photos: [Photo]) {
+        self.photos = photos
+    }
+    
+    //3
+    override func main() {
+        //4
+        if self.cancelled {
+            return
+        }
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(photos, toFile: Photo.contentURL.path!)
+        
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
+        
+        
+    }
+}

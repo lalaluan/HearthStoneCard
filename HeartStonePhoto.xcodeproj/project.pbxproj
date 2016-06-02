@@ -18,6 +18,7 @@
 		7CCB1A3D1CF43C300078421A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7CCB1A351CF43C300078421A /* Info.plist */; };
 		7CCB1A401CF43C300078421A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB1A381CF43C300078421A /* ViewController.swift */; };
 		7CFBD7351D004A7F00CAE755 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFBD7341D004A7F00CAE755 /* Photo.swift */; };
+		7CFBD7371D00629600CAE755 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFBD7361D00629600CAE755 /* PendingOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7CCB1A351CF43C300078421A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CCB1A381CF43C300078421A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CFBD7341D004A7F00CAE755 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		7CFBD7361D00629600CAE755 /* PendingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				7CCB1A381CF43C300078421A /* ViewController.swift */,
 				7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */,
 				7CFBD7341D004A7F00CAE755 /* Photo.swift */,
+				7CFBD7361D00629600CAE755 /* PendingOperations.swift */,
 			);
 			path = HeartStonePhoto;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				7CCB1A391CF43C300078421A /* AppDelegate.swift in Sources */,
 				7CCB1A401CF43C300078421A /* ViewController.swift in Sources */,
 				7CBDF9961CFD6FBE0096A90C /* MyTableViewCell.swift in Sources */,
+				7CFBD7371D00629600CAE755 /* PendingOperations.swift in Sources */,
 				7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */,
 				7CFBD7351D004A7F00CAE755 /* Photo.swift in Sources */,
 			);
