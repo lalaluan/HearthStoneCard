@@ -10,11 +10,15 @@ import UIKit
 
 class MainTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
-    var photos = [UIImage]()
+    var photos = [Photo]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let files = loadPhotos(){
+            photos += files
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,7 +48,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) 
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MyTableViewCell
 
         // Configure the cell...
         
@@ -54,9 +58,13 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         //cell.photoImage.backgroundColor = UIColor.blackColor()
         
         //cell.photoImage.setNeedsDisplay()
-        cell.imageView?.image = photos[indexPath.row]
         
-        cell.imageView?.bounds = CGRect(x: 0, y: 0, width: 90, height: 90)
+        //cell.imageView?.clipsToBounds = true
+        
+        cell.imageView?.image = photos[indexPath.row].image
+        
+        cell.imageView?.backgroundColor = UIColor.blackColor()
+        //cell.imageView?.bounds = CGRect(x: 0, y: 0, width: 90, height: 90)
         
         //cell.imageView?.image?.drawInRect(CGRect(x: 0, y: 0, width: 90, height: 90))
         
@@ -120,9 +128,11 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        self.photos.append(selectedImage)
+        self.photos.append(Photo(image: selectedImage))
         
         self.tableView?.reloadData()
+        
+        savePhotos()
         
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -152,4 +162,20 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         presentViewController(imagePickerController, animated: true, completion: nil)
         
     }
+    
+    
+    // MARK:NSCording
+    func savePhotos() {
+        
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(photos, toFile: Photo.contentURL.path!)
+        
+        if !isSuccessfulSave {
+            print("Failed to save meals...")
+        }
+    }
+    
+    func loadPhotos() -> [Photo]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Photo.contentURL.path!) as? [Photo]
+    }
+    
 }

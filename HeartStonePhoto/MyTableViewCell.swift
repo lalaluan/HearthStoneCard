@@ -25,4 +25,11 @@ class MyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    override func layoutSubviews() {
+        self.imageView!.bounds = CGRectMake(0,0,75,100);
+        
+        self.imageView!.frame = CGRectMake(0,0,75,100);
+        
+        self.imageView!.contentMode = .ScaleToFill
+    }
 }
