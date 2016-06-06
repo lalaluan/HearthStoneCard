@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A06A0411CF34586005120B1 /* HeartStonePhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06A0401CF34586005120B1 /* HeartStonePhotoTests.swift */; };
 		3A06A04C1CF34586005120B1 /* HeartStonePhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06A04B1CF34586005120B1 /* HeartStonePhotoUITests.swift */; };
+		3A2802FF1D05AAC500327464 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2802FD1D05AAC500327464 /* DetailViewController.swift */; };
+		3A2803041D05BED800327464 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A2803031D05BED800327464 /* DetailView.xib */; };
 		7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */; };
 		7CBDF9961CFD6FBE0096A90C /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */; };
 		7CCB1A391CF43C300078421A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB1A2F1CF43C300078421A /* AppDelegate.swift */; };
@@ -46,6 +48,8 @@
 		3A06A0471CF34586005120B1 /* HeartStonePhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartStonePhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A06A04B1CF34586005120B1 /* HeartStonePhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartStonePhotoUITests.swift; sourceTree = "<group>"; };
 		3A06A04D1CF34586005120B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A2802FD1D05AAC500327464 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3A2803031D05BED800327464 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		7CCB1A2F1CF43C300078421A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				7CCB1A301CF43C300078421A /* Assets.xcassets */,
 				7CCB1A311CF43C300078421A /* LaunchScreen.storyboard */,
 				7CCB1A331CF43C300078421A /* Main.storyboard */,
+				3A2802FD1D05AAC500327464 /* DetailViewController.swift */,
+				3A2803031D05BED800327464 /* DetailView.xib */,
 				7CCB1A351CF43C300078421A /* Info.plist */,
 				7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */,
 				7CCB1A381CF43C300078421A /* ViewController.swift */,
@@ -247,6 +253,7 @@
 				7CCB1A3C1CF43C300078421A /* Main.storyboard in Resources */,
 				7CCB1A3B1CF43C300078421A /* LaunchScreen.storyboard in Resources */,
 				7CCB1A3D1CF43C300078421A /* Info.plist in Resources */,
+				3A2803041D05BED800327464 /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +284,7 @@
 				7CFBD7371D00629600CAE755 /* PendingOperations.swift in Sources */,
 				7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */,
 				7CFBD7351D004A7F00CAE755 /* Photo.swift in Sources */,
+				3A2802FF1D05AAC500327464 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

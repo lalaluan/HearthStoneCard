@@ -110,6 +110,24 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     }
     */
 
+    // MARK: -selection
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        NSLog("select")
+        let nav = UINavigationController(nibName: "DetailView.xib", bundle: nil)
+        
+        let detail = DetailViewController(photo: photos[indexPath.row])
+        
+        nav.pushViewController(detail, animated: true)
+        
+        presentViewController(nav, animated: true, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        NSLog("deselect")
+    }
+    
+    
     /*
     // MARK: - Navigation
 
