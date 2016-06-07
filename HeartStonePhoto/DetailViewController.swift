@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  HeartStonePhoto
 //
-//  Created by 梁德明 on 16/6/6.
+//  Created by nju on 16/6/7.
 //  Copyright © 2016年 CX. All rights reserved.
 //
 
@@ -10,28 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet var image: UIImageView!
-    
-    
-    var photo:Photo
-    
-    init(photo:Photo){
-        
-        self.photo = photo
-        
-        self.image = UIImageView(image: photo.image)
-        
-        super.init(nibName: nil, bundle:nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    @IBOutlet weak var image: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        image.image = photo.image
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: #selector(DetailViewController.cancel))
+
+        let lastVC = ((self.presentingViewController as! UINavigationController).topViewController as! MainTableViewController)
+        
+        self.image.image = lastVC.photos[lastVC.index.row].image
         // Do any additional setup after loading the view.
     }
 
@@ -40,6 +28,9 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func cancel(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

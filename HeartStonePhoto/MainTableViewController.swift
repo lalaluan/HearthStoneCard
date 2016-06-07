@@ -14,6 +14,8 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     
     let pendingOperations = PendingOperations()
     
+    var index:NSIndexPath = NSIndexPath()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,17 +52,6 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MyTableViewCell
-
-        // Configure the cell...
-        
-        
-        //cell.photoImage.image = UIImage(CGImage: photos[indexPath.row])
-        
-        //cell.photoImage.backgroundColor = UIColor.blackColor()
-        
-        //cell.photoImage.setNeedsDisplay()
-        
-        //cell.imageView?.clipsToBounds = true
         
         cell.imageView?.image = photos[indexPath.row].image
         
@@ -114,13 +105,21 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         NSLog("select")
-        let nav = UINavigationController(nibName: "DetailView.xib", bundle: nil)
         
-        let detail = DetailViewController(photo: photos[indexPath.row])
+        index = indexPath
         
-        nav.pushViewController(detail, animated: true)
+        let detail = DetailViewController()
         
-        presentViewController(nav, animated: true, completion: nil)
+        //detail.image.image = photos[indexPath.row].image
+        
+        let nav:UINavigationController = UINavigationController(rootViewController: detail)
+        
+        //nav.pushViewController(detail, animated: true)
+        nav.modalTransitionStyle = .CrossDissolve
+        
+        nav.hidesBarsOnTap = true
+        
+        self.presentViewController(nav, animated: true, completion: nil)
     }
     
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
