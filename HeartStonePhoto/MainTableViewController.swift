@@ -19,6 +19,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //(self.presentingViewController as! UINavigationController).hidesBarsOnTap = true
         if let files = loadPhotos(){
             photos += files
         }
