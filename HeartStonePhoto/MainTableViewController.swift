@@ -151,7 +151,11 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         
         self.tableView?.reloadData()
         
-        savePhotos()
+        UIImageWriteToSavedPhotosAlbum(selectedImage, nil, nil, nil)
+        
+        NSLog("%d",self.photos.count)
+        
+        savePhotos(self.photos.count)
         
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -193,7 +197,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         }
     }*/
     
-    func savePhotos(){
+    func savePhotos(count:Int){
         // use the index 0 for saving
         let index = NSIndexPath(index: 0)
         //1
@@ -211,6 +215,8 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
             }
             dispatch_async(dispatch_get_main_queue(), {
                 self.pendingOperations.loadSaveProgress.removeValueForKey(index)
+                
+                //UIImageWriteToSavedPhotosAlbum(self.photos[count].image, nil, nil, nil)
                 
                 self.tableView.reloadData()
                 //self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
