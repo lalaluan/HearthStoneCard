@@ -116,7 +116,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         let nav:UINavigationController = UINavigationController(rootViewController: detail)
         
         //nav.pushViewController(detail, animated: true)
-        nav.modalTransitionStyle = .CrossDissolve
+        nav.modalTransitionStyle = .FlipHorizontal
         
         nav.hidesBarsOnTap = true
         

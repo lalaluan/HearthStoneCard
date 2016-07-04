@@ -25,8 +25,10 @@ class DetailViewController: UIViewController{
         // Do any additional setup after loading the view.
         
         //let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(DetailViewController.slide))
-        let gesture = UITapGestureRecognizer(target: self, action:
+        let gesture = UISwipeGestureRecognizer(target: self, action:
             #selector(DetailViewController.slide))
+        gesture.direction = .Right
+        
         self.image.addGestureRecognizer(gesture)
     }
 
@@ -39,7 +41,7 @@ class DetailViewController: UIViewController{
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    func slide(recognizer: UITapGestureRecognizer){
+    func slide(recognizer: UISwipeGestureRecognizer){
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     /*@IBAction func selectImageFromPhotoLibrary(sender: UIScreenEdgePanGestureRecognizer) {
