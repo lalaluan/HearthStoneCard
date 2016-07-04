@@ -26,9 +26,9 @@ class MyTableViewCell: UITableViewCell {
     }
 
     override func layoutSubviews() {
-        self.imageView!.bounds = CGRectMake(0,0,75,100);
+        self.imageView!.bounds = CGRectMake(0,0,60,100);
         
-        self.imageView!.frame = CGRectMake(0,0,75,100);
+        self.imageView!.frame = CGRectMake(0,0,60,100);
         
         self.imageView!.contentMode = .ScaleToFill
     }

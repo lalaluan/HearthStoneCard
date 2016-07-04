@@ -8,9 +8,11 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController{
 
     @IBOutlet weak var image: UIImageView!
+    
+    //@IBOutlet var recognizer: UIScreenEdgePanGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,11 @@ class DetailViewController: UIViewController {
         
         self.image.image = lastVC.photos[lastVC.index.row].image
         // Do any additional setup after loading the view.
+        
+        //let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(DetailViewController.slide))
+        let gesture = UITapGestureRecognizer(target: self, action:
+            #selector(DetailViewController.slide))
+        self.image.addGestureRecognizer(gesture)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +39,13 @@ class DetailViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
+    func slide(recognizer: UITapGestureRecognizer){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    /*@IBAction func selectImageFromPhotoLibrary(sender: UIScreenEdgePanGestureRecognizer) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }*/
+    
     /*
     // MARK: - Navigation
 
