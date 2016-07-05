@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3A06A0411CF34586005120B1 /* HeartStonePhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06A0401CF34586005120B1 /* HeartStonePhotoTests.swift */; };
 		3A06A04C1CF34586005120B1 /* HeartStonePhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06A04B1CF34586005120B1 /* HeartStonePhotoUITests.swift */; };
+		7C0D33A41D2BD84600DFB580 /* magic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D33A31D2BD84600DFB580 /* magic.png */; };
+		7C0D33A61D2BD84F00DFB580 /* 959.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D33A51D2BD84F00DFB580 /* 959.png */; };
 		7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */; };
 		7CBDF9961CFD6FBE0096A90C /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */; };
 		7CCB1A391CF43C300078421A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB1A2F1CF43C300078421A /* AppDelegate.swift */; };
@@ -48,6 +50,8 @@
 		3A06A0471CF34586005120B1 /* HeartStonePhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartStonePhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A06A04B1CF34586005120B1 /* HeartStonePhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartStonePhotoUITests.swift; sourceTree = "<group>"; };
 		3A06A04D1CF34586005120B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C0D33A31D2BD84600DFB580 /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
+		7C0D33A51D2BD84F00DFB580 /* 959.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 959.png; sourceTree = "<group>"; };
 		7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		7CCB1A2F1CF43C300078421A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */,
 				7CFBD7341D004A7F00CAE755 /* Photo.swift */,
 				7CFBD7361D00629600CAE755 /* PendingOperations.swift */,
+				7C0D33A31D2BD84600DFB580 /* magic.png */,
+				7C0D33A51D2BD84F00DFB580 /* 959.png */,
 				7CCB1A351CF43C300078421A /* Info.plist */,
 			);
 			path = HeartStonePhoto;
@@ -252,6 +258,8 @@
 				7CCB1A3A1CF43C300078421A /* Assets.xcassets in Resources */,
 				7CCB1A3C1CF43C300078421A /* Main.storyboard in Resources */,
 				7CD23D741D06CECB0078290E /* DetailViewController.xib in Resources */,
+				7C0D33A41D2BD84600DFB580 /* magic.png in Resources */,
+				7C0D33A61D2BD84F00DFB580 /* 959.png in Resources */,
 				7CCB1A3B1CF43C300078421A /* LaunchScreen.storyboard in Resources */,
 				7CCB1A3D1CF43C300078421A /* Info.plist in Resources */,
 			);

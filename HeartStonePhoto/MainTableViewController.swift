@@ -104,7 +104,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
 
     // MARK: -selection
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    /*override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         NSLog("select")
         
         index = indexPath
@@ -121,10 +121,25 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         nav.hidesBarsOnTap = true
         
         self.presentViewController(nav, animated: true, completion: nil)
-    }
+    }*/
     
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        NSLog("deselect")
+    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath?{
+        index = indexPath
+        
+        let detail = DetailViewController()
+        
+        //detail.image.image = photos[indexPath.row].image
+        
+        let nav:UINavigationController = UINavigationController(rootViewController: detail)
+        
+        //nav.pushViewController(detail, animated: true)
+        nav.modalTransitionStyle = .CrossDissolve
+        
+        nav.hidesBarsOnTap = true
+        
+        self.presentViewController(nav, animated: true, completion: nil)
+
+        return indexPath
     }
     
     
