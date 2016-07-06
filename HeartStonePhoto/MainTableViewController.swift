@@ -173,6 +173,18 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         savePhotos(self.photos.count)
         
         dismissViewControllerAnimated(true, completion: nil)
+        
+        let cardView = CardViewController()
+        
+        let nav:UINavigationController = UINavigationController(rootViewController: cardView)
+        
+        //nav.pushViewController(detail, animated: true)
+        nav.modalTransitionStyle = .CrossDissolve
+        
+        nav.navigationBarHidden = true
+        
+        self.presentViewController(nav, animated: true, completion: nil)
+
     }
     
     

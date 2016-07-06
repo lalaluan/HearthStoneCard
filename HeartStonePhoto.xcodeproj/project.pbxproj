@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3A06A0411CF34586005120B1 /* HeartStonePhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06A0401CF34586005120B1 /* HeartStonePhotoTests.swift */; };
 		3A06A04C1CF34586005120B1 /* HeartStonePhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A06A04B1CF34586005120B1 /* HeartStonePhotoUITests.swift */; };
-		7C0D33A41D2BD84600DFB580 /* magic.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D33A31D2BD84600DFB580 /* magic.png */; };
 		7C0D33A61D2BD84F00DFB580 /* 959.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D33A51D2BD84F00DFB580 /* 959.png */; };
 		7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */; };
 		7CBDF9961CFD6FBE0096A90C /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */; };
@@ -21,6 +20,13 @@
 		7CCB1A401CF43C300078421A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB1A381CF43C300078421A /* ViewController.swift */; };
 		7CD23D731D06CECB0078290E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CD23D711D06CECB0078290E /* DetailViewController.swift */; };
 		7CD23D741D06CECB0078290E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CD23D721D06CECB0078290E /* DetailViewController.xib */; };
+		7CDF83361D2D147C0040AC89 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CDF83341D2D147C0040AC89 /* CardViewController.swift */; };
+		7CDF83371D2D147C0040AC89 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF83351D2D147C0040AC89 /* CardViewController.xib */; };
+		7CDF83391D2D24D90040AC89 /* 卡背.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF83381D2D24D90040AC89 /* 卡背.png */; };
+		7CDF833D1D2D43A10040AC89 /* mag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF833C1D2D43A10040AC89 /* mag.png */; };
+		7CDF833F1D2D458B0040AC89 /* attack.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF833E1D2D458B0040AC89 /* attack.png */; };
+		7CDF83411D2D47380040AC89 /* life.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF83401D2D47380040AC89 /* life.png */; };
+		7CDF83431D2D47830040AC89 /* 随从卡背.png in Resources */ = {isa = PBXBuildFile; fileRef = 7CDF83421D2D47830040AC89 /* 随从卡背.png */; };
 		7CFBD7351D004A7F00CAE755 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFBD7341D004A7F00CAE755 /* Photo.swift */; };
 		7CFBD7371D00629600CAE755 /* PendingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CFBD7361D00629600CAE755 /* PendingOperations.swift */; };
 /* End PBXBuildFile section */
@@ -50,7 +56,6 @@
 		3A06A0471CF34586005120B1 /* HeartStonePhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeartStonePhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A06A04B1CF34586005120B1 /* HeartStonePhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartStonePhotoUITests.swift; sourceTree = "<group>"; };
 		3A06A04D1CF34586005120B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C0D33A31D2BD84600DFB580 /* magic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = magic.png; sourceTree = "<group>"; };
 		7C0D33A51D2BD84F00DFB580 /* 959.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 959.png; sourceTree = "<group>"; };
 		7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
@@ -62,6 +67,13 @@
 		7CCB1A381CF43C300078421A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CD23D711D06CECB0078290E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7CD23D721D06CECB0078290E /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		7CDF83341D2D147C0040AC89 /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		7CDF83351D2D147C0040AC89 /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		7CDF83381D2D24D90040AC89 /* 卡背.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "卡背.png"; sourceTree = "<group>"; };
+		7CDF833C1D2D43A10040AC89 /* mag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mag.png; sourceTree = "<group>"; };
+		7CDF833E1D2D458B0040AC89 /* attack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attack.png; sourceTree = "<group>"; };
+		7CDF83401D2D47380040AC89 /* life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = life.png; sourceTree = "<group>"; };
+		7CDF83421D2D47830040AC89 /* 随从卡背.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "随从卡背.png"; sourceTree = "<group>"; };
 		7CFBD7341D004A7F00CAE755 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		7CFBD7361D00629600CAE755 /* PendingOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,17 +146,23 @@
 			children = (
 				7CCB1A2F1CF43C300078421A /* AppDelegate.swift */,
 				7CCB1A301CF43C300078421A /* Assets.xcassets */,
-				7CCB1A311CF43C300078421A /* LaunchScreen.storyboard */,
-				7CCB1A331CF43C300078421A /* Main.storyboard */,
 				7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */,
 				7CD23D711D06CECB0078290E /* DetailViewController.swift */,
-				7CD23D721D06CECB0078290E /* DetailViewController.xib */,
 				7CCB1A381CF43C300078421A /* ViewController.swift */,
 				7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */,
 				7CFBD7341D004A7F00CAE755 /* Photo.swift */,
 				7CFBD7361D00629600CAE755 /* PendingOperations.swift */,
-				7C0D33A31D2BD84600DFB580 /* magic.png */,
+				7CDF83341D2D147C0040AC89 /* CardViewController.swift */,
+				7CCB1A311CF43C300078421A /* LaunchScreen.storyboard */,
+				7CCB1A331CF43C300078421A /* Main.storyboard */,
+				7CD23D721D06CECB0078290E /* DetailViewController.xib */,
+				7CDF83351D2D147C0040AC89 /* CardViewController.xib */,
 				7C0D33A51D2BD84F00DFB580 /* 959.png */,
+				7CDF833E1D2D458B0040AC89 /* attack.png */,
+				7CDF83381D2D24D90040AC89 /* 卡背.png */,
+				7CDF83401D2D47380040AC89 /* life.png */,
+				7CDF83421D2D47830040AC89 /* 随从卡背.png */,
+				7CDF833C1D2D43A10040AC89 /* mag.png */,
 				7CCB1A351CF43C300078421A /* Info.plist */,
 			);
 			path = HeartStonePhoto;
@@ -255,13 +273,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CDF83371D2D147C0040AC89 /* CardViewController.xib in Resources */,
+				7CDF83431D2D47830040AC89 /* 随从卡背.png in Resources */,
+				7CDF833D1D2D43A10040AC89 /* mag.png in Resources */,
 				7CCB1A3A1CF43C300078421A /* Assets.xcassets in Resources */,
+				7CDF833F1D2D458B0040AC89 /* attack.png in Resources */,
 				7CCB1A3C1CF43C300078421A /* Main.storyboard in Resources */,
 				7CD23D741D06CECB0078290E /* DetailViewController.xib in Resources */,
-				7C0D33A41D2BD84600DFB580 /* magic.png in Resources */,
+				7CDF83391D2D24D90040AC89 /* 卡背.png in Resources */,
 				7C0D33A61D2BD84F00DFB580 /* 959.png in Resources */,
 				7CCB1A3B1CF43C300078421A /* LaunchScreen.storyboard in Resources */,
 				7CCB1A3D1CF43C300078421A /* Info.plist in Resources */,
+				7CDF83411D2D47380040AC89 /* life.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +313,7 @@
 				7CCB1A401CF43C300078421A /* ViewController.swift in Sources */,
 				7CBDF9961CFD6FBE0096A90C /* MyTableViewCell.swift in Sources */,
 				7CFBD7371D00629600CAE755 /* PendingOperations.swift in Sources */,
+				7CDF83361D2D147C0040AC89 /* CardViewController.swift in Sources */,
 				7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */,
 				7CFBD7351D004A7F00CAE755 /* Photo.swift in Sources */,
 				7CD23D731D06CECB0078290E /* DetailViewController.swift in Sources */,
