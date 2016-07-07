@@ -33,17 +33,25 @@
                 </imageView>
                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-dh-qHx">
                     <rect key="frame" x="496" y="393" width="72" height="72"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Wsd-lK-AGI"/>
                         <constraint firstAttribute="height" constant="50" id="uNh-j4-KL3"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="srr-w3-9Vr" appends="YES" id="EI9-3y-W3e"/>
+                    </connections>
                 </imageView>
                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-JI-BSL">
                     <rect key="frame" x="61" y="393" width="72" height="72"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="dH7-BD-Vh3"/>
                         <constraint firstAttribute="height" constant="50" id="lDU-i1-BBy"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="NXo-qh-ctd" appends="YES" id="Bbx-y9-DBI"/>
+                    </connections>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="name" text="深渊滑行者索苟斯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-RQ-2EO" userLabel="name">
                     <rect key="frame" x="195" y="248" width="238" height="25"/>
@@ -59,7 +67,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-9F-aCQ">
                     <rect key="frame" x="462" y="544" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="确定"/>
                     <connections>
                         <action selector="save:" destination="-1" eventType="touchUpInside" id="hin-Oo-d2Z"/>
                     </connections>
@@ -75,11 +83,19 @@
                         <outletCollection property="gestureRecognizers" destination="z5e-zk-DxS" appends="YES" id="N4N-JZ-cj1"/>
                     </connections>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCr-5o-1Ve">
+                    <rect key="frame" x="56" y="544" width="46" height="30"/>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="cancle:" destination="-1" eventType="touchUpInside" id="3Qo-LS-C3s"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Amc-xh-3gw" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="60" id="0LO-UX-pzX"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" id="824-Ig-xho"/>
+                <constraint firstItem="jCr-5o-1Ve" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" constant="20" id="8kv-B0-iJh"/>
                 <constraint firstAttribute="bottom" secondItem="Lhk-9F-aCQ" secondAttribute="bottom" constant="20" id="BVY-49-4aX"/>
                 <constraint firstItem="oZF-XP-Axv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="Cty-7e-cUa"/>
                 <constraint firstAttribute="trailing" secondItem="Lhk-9F-aCQ" secondAttribute="trailing" constant="20" id="FO7-jb-SGN"/>
@@ -93,6 +109,7 @@
                 <constraint firstItem="ewL-JI-BSL" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="30" id="bGM-n1-27K"/>
                 <constraint firstItem="vnA-iw-qgP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="20" id="bVy-lY-gCl"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" id="ePz-Mg-xTF"/>
+                <constraint firstAttribute="bottomMargin" secondItem="jCr-5o-1Ve" secondAttribute="bottom" constant="20" id="kow-kU-t3z"/>
                 <constraint firstItem="Amc-xh-3gw" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" constant="-65" id="q4M-iu-Voa"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="top" secondItem="vnA-iw-qgP" secondAttribute="top" id="scy-0p-lsX"/>
                 <constraint firstItem="Amc-xh-3gw" firstAttribute="top" secondItem="Sgc-RQ-2EO" secondAttribute="bottom" constant="50" id="tgB-Zu-h0B"/>
@@ -103,6 +120,16 @@
         <tapGestureRecognizer id="z5e-zk-DxS">
             <connections>
                 <action selector="tapMag:" destination="-1" id="aYj-K1-1q6"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="NXo-qh-ctd">
+            <connections>
+                <action selector="tapMag:" destination="-1" id="IFp-8M-5WU"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="srr-w3-9Vr">
+            <connections>
+                <action selector="tapMag:" destination="-1" id="4Kq-23-Lng"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

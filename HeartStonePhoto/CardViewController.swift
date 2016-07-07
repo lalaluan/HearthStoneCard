@@ -78,6 +78,16 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         }
     }
 
+    @IBAction func cancle(sender: AnyObject) {
+        if canSave{
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        else{
+            picker.hidden = true
+            picker.userInteractionEnabled = false
+            canSave = true
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -93,7 +103,6 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         picker.hidden = false
         picker.userInteractionEnabled = true
         canSave = false
-        
     }
     
     
