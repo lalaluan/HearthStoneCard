@@ -31,14 +31,14 @@
                         <constraint firstAttribute="width" secondItem="vnA-iw-qgP" secondAttribute="height" multiplier="420:600" id="6B7-tw-bPy"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-dh-qHx">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-dh-qHx">
                     <rect key="frame" x="496" y="393" width="72" height="72"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="Wsd-lK-AGI"/>
                         <constraint firstAttribute="height" constant="50" id="uNh-j4-KL3"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-JI-BSL">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-JI-BSL">
                     <rect key="frame" x="61" y="393" width="72" height="72"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="dH7-BD-Vh3"/>
@@ -52,24 +52,37 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="description" text="嘲讽,无法成为法术或英雄技能的目标。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-xh-3gw" userLabel="description">
-                    <rect key="frame" x="122" y="364" width="338" height="143"/>
+                    <rect key="frame" x="81" y="364" width="420" height="143"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhk-9F-aCQ">
+                    <rect key="frame" x="462" y="544" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="save:" destination="-1" eventType="touchUpInside" id="hin-Oo-d2Z"/>
+                    </connections>
+                </button>
                 <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-XP-Axv">
                     <rect key="frame" x="56" y="49" width="40" height="40"/>
+                    <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="lya-yv-01e"/>
                         <constraint firstAttribute="width" constant="50" id="q2O-rT-hUE"/>
                     </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="z5e-zk-DxS" appends="YES" id="N4N-JZ-cj1"/>
+                    </connections>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Amc-xh-3gw" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="60" id="0LO-UX-pzX"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" id="824-Ig-xho"/>
+                <constraint firstAttribute="bottom" secondItem="Lhk-9F-aCQ" secondAttribute="bottom" constant="20" id="BVY-49-4aX"/>
                 <constraint firstItem="oZF-XP-Axv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="Cty-7e-cUa"/>
+                <constraint firstAttribute="trailing" secondItem="Lhk-9F-aCQ" secondAttribute="trailing" constant="20" id="FO7-jb-SGN"/>
                 <constraint firstItem="Sgc-RQ-2EO" firstAttribute="centerX" secondItem="vnA-iw-qgP" secondAttribute="centerX" id="Hcq-R5-JtB"/>
                 <constraint firstItem="oZF-XP-Axv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="JFI-u1-VsH"/>
                 <constraint firstItem="0SR-dh-qHx" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" constant="-17" id="N3C-Op-bN3"/>
@@ -87,6 +100,11 @@
                 <constraint firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" id="zzN-hz-eaD"/>
             </constraints>
         </view>
+        <tapGestureRecognizer id="z5e-zk-DxS">
+            <connections>
+                <action selector="tapMag:" destination="-1" id="aYj-K1-1q6"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="9.png" width="81" height="90"/>
