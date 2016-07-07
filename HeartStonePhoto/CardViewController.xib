@@ -23,64 +23,74 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="959.png" translatesAutoresizingMaskIntoConstraints="NO" id="dqx-js-sTo">
-                    <rect key="frame" x="8" y="8" width="584" height="584"/>
+                    <rect key="frame" x="8" y="8" width="592" height="457"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="随从卡背.png" translatesAutoresizingMaskIntoConstraints="NO" id="vnA-iw-qgP">
-                    <rect key="frame" x="8" y="28" width="584" height="550"/>
+                    <rect key="frame" x="8" y="28" width="584" height="437"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="vnA-iw-qgP" secondAttribute="height" multiplier="420:600" id="6B7-tw-bPy"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="life.png" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-dh-qHx">
-                    <rect key="frame" x="496" y="498" width="72" height="72"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="0SR-dh-qHx">
+                    <rect key="frame" x="496" y="393" width="72" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="Wsd-lK-AGI"/>
+                        <constraint firstAttribute="height" constant="50" id="uNh-j4-KL3"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="mag.png" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-XP-Axv">
-                    <rect key="frame" x="17" y="38" width="56" height="56"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-JI-BSL">
+                    <rect key="frame" x="61" y="393" width="72" height="72"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="dH7-BD-Vh3"/>
+                        <constraint firstAttribute="height" constant="50" id="lDU-i1-BBy"/>
+                    </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="30" image="attack.png" translatesAutoresizingMaskIntoConstraints="NO" id="ewL-JI-BSL">
-                    <rect key="frame" x="29" y="498" width="72" height="72"/>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="name" text="滑行者" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-RQ-2EO" userLabel="name">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="name" text="深渊滑行者索苟斯" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgc-RQ-2EO" userLabel="name">
                     <rect key="frame" x="195" y="248" width="238" height="25"/>
-                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="PingFangSC-Semibold" family="PingFang SC" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="description" text="嘲讽，无法成为法术或英雄技能的目标" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-xh-3gw" userLabel="description">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" restorationIdentifier="description" text="嘲讽,无法成为法术或英雄技能的目标。" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-xh-3gw" userLabel="description">
                     <rect key="frame" x="122" y="364" width="338" height="143"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="40" placeholderIntrinsicHeight="40" image="9.png" translatesAutoresizingMaskIntoConstraints="NO" id="oZF-XP-Axv">
+                    <rect key="frame" x="56" y="49" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="lya-yv-01e"/>
+                        <constraint firstAttribute="width" constant="50" id="q2O-rT-hUE"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Amc-xh-3gw" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="55" id="0LO-UX-pzX"/>
+                <constraint firstItem="Amc-xh-3gw" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="60" id="0LO-UX-pzX"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" id="824-Ig-xho"/>
                 <constraint firstItem="oZF-XP-Axv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="Cty-7e-cUa"/>
                 <constraint firstItem="Sgc-RQ-2EO" firstAttribute="centerX" secondItem="vnA-iw-qgP" secondAttribute="centerX" id="Hcq-R5-JtB"/>
                 <constraint firstItem="oZF-XP-Axv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="JFI-u1-VsH"/>
-                <constraint firstItem="0SR-dh-qHx" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" constant="-19" id="N3C-Op-bN3"/>
-                <constraint firstItem="0SR-dh-qHx" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" constant="-36" id="XBC-7H-7vD"/>
+                <constraint firstItem="0SR-dh-qHx" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" constant="-17" id="N3C-Op-bN3"/>
+                <constraint firstItem="0SR-dh-qHx" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" constant="-35" id="XBC-7H-7vD"/>
                 <constraint firstItem="vnA-iw-qgP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XFx-yq-OCO"/>
-                <constraint firstItem="Sgc-RQ-2EO" firstAttribute="top" secondItem="vnA-iw-qgP" secondAttribute="top" constant="250" id="XYX-3r-e1F"/>
+                <constraint firstItem="Sgc-RQ-2EO" firstAttribute="top" secondItem="vnA-iw-qgP" secondAttribute="top" constant="293" id="XYX-3r-e1F"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" id="Xe6-TV-DcJ"/>
-                <constraint firstItem="ewL-JI-BSL" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="33" id="bGM-n1-27K"/>
+                <constraint firstItem="ewL-JI-BSL" firstAttribute="leading" secondItem="vnA-iw-qgP" secondAttribute="leading" constant="30" id="bGM-n1-27K"/>
                 <constraint firstItem="vnA-iw-qgP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" constant="20" id="bVy-lY-gCl"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" id="ePz-Mg-xTF"/>
-                <constraint firstItem="Amc-xh-3gw" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" constant="-60" id="q4M-iu-Voa"/>
+                <constraint firstItem="Amc-xh-3gw" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" constant="-65" id="q4M-iu-Voa"/>
                 <constraint firstItem="dqx-js-sTo" firstAttribute="top" secondItem="vnA-iw-qgP" secondAttribute="top" id="scy-0p-lsX"/>
                 <constraint firstItem="Amc-xh-3gw" firstAttribute="top" secondItem="Sgc-RQ-2EO" secondAttribute="bottom" constant="50" id="tgB-Zu-h0B"/>
-                <constraint firstItem="ewL-JI-BSL" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" constant="-19" id="wTT-Rq-V7f"/>
+                <constraint firstItem="ewL-JI-BSL" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" constant="-17" id="wTT-Rq-V7f"/>
                 <constraint firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" id="zzN-hz-eaD"/>
             </constraints>
         </view>
     </objects>
     <resources>
+        <image name="9.png" width="81" height="90"/>
         <image name="959.png" width="371" height="519"/>
-        <image name="attack.png" width="46" height="46"/>
-        <image name="life.png" width="39" height="39"/>
-        <image name="mag.png" width="53" height="53"/>
         <image name="随从卡背.png" width="420" height="600"/>
     </resources>
 </document>
