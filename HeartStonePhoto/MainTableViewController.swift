@@ -16,6 +16,8 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     
     var index:NSIndexPath = NSIndexPath()
     
+    var photoToMake:UIImage = UIImage()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -160,9 +162,9 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        photoToMake = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        self.photos.append(Photo(image: selectedImage))
+        /*self.photos.append(Photo(image: selectedImage))
         
         self.tableView?.reloadData()
         
@@ -170,7 +172,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         
         NSLog("%d",self.photos.count)
         
-        savePhotos(self.photos.count)
+        savePhotos(self.photos.count)*/
         
         dismissViewControllerAnimated(true, completion: nil)
         

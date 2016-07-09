@@ -20,6 +20,9 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     @IBOutlet weak var nameL: UILabel!
     @IBOutlet weak var descL: UILabel!
     
+    var result:UIImage = UIImage()
+    
+    var tableView:MainTableViewController = MainTableViewController()
     
     //var numbers = ["0","1","2","3","4","5","6","7","8","9"]
     var numbers:[UIImage] = []
@@ -52,6 +55,10 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         }
         nameT.delegate = self
         desc.delegate = self
+        
+        tableView = (self.presentingViewController as! UINavigationController).topViewController as! MainTableViewController
+        
+        photo.image = tableView.photoToMake
     }
 
     override func didReceiveMemoryWarning() {
@@ -68,11 +75,19 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         
             self.view.layer.renderInContext(UIGraphicsGetCurrentContext()!)
         
-            let image = UIGraphicsGetImageFromCurrentImageContext();
+            result = UIGraphicsGetImageFromCurrentImageContext();
         
             UIGraphicsEndImageContext();
         
-            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+            UIImageWriteToSavedPhotosAlbum(result, nil, nil, nil);
+            
+            tableView.photos.append(Photo(image: result))
+            
+            tableView.tableView.reloadData()
+            
+            tableView.savePhotos(tableView.photos.count)
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
         }
         else{
             picker.hidden = true
@@ -116,6 +131,7 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         nameT.userInteractionEnabled = true
         desc.hidden = false
         desc.userInteractionEnabled = true
+        canSave = false
         //text.setNeedsFocusUpdate()
     }
     
@@ -153,6 +169,7 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         nameT.userInteractionEnabled = false
         desc.hidden = true
         desc.userInteractionEnabled = false
+        canSave = true
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
