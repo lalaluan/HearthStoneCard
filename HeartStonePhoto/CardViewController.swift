@@ -8,15 +8,18 @@
 
 import UIKit
 
-class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextViewDelegate {
+class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate {
 
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var card: UIImageView!
     @IBOutlet weak var life: UIImageView!
     @IBOutlet weak var magic: UIImageView!
     @IBOutlet weak var attack: UIImageView!
-    @IBOutlet weak var text: UITextField!
+    @IBOutlet weak var nameT: UITextField!
     @IBOutlet weak var desc: UITextField!
+    @IBOutlet weak var nameL: UILabel!
+    @IBOutlet weak var descL: UILabel!
+    
     
     //var numbers = ["0","1","2","3","4","5","6","7","8","9"]
     var numbers:[UIImage] = []
@@ -47,8 +50,8 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         for i in 0...9{
             numbers.append(UIImage(named: String(i)+".png")!)
         }
-        
-        
+        nameT.delegate = self
+        desc.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,8 +112,8 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     }
     
     @IBAction func tapCard(sender: AnyObject) {
-        text.hidden = false
-        text.userInteractionEnabled = true
+        nameT.hidden = false
+        nameT.userInteractionEnabled = true
         desc.hidden = false
         desc.userInteractionEnabled = true
         //text.setNeedsFocusUpdate()
@@ -139,5 +142,22 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         alertView.addButtonWithTitle("OK")
         alertView.show()
     }*/
+    
+    /*func textViewDidEndEditing(textView: UITextView) {
+        textView.
+    }*/
+    func textFieldDidEndEditing(textField: UITextField) {
+        nameL.text = nameT.text
+        descL.text = desc.text
+        nameT.hidden = true
+        nameT.userInteractionEnabled = false
+        desc.hidden = true
+        desc.userInteractionEnabled = false
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
 }

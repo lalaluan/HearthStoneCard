@@ -11,11 +11,13 @@
             <connections>
                 <outlet property="attack" destination="ewL-JI-BSL" id="jBN-17-4Dg"/>
                 <outlet property="card" destination="vnA-iw-qgP" id="3EM-8d-CeB"/>
-                <outlet property="desc" destination="Soa-Fx-FVm" id="pvD-Vk-mr2"/>
+                <outlet property="desc" destination="Soa-Fx-FVm" id="tof-dp-jzY"/>
+                <outlet property="descL" destination="Amc-xh-3gw" id="BYJ-Jq-wf8"/>
                 <outlet property="life" destination="0SR-dh-qHx" id="F8k-RD-pRr"/>
                 <outlet property="magic" destination="oZF-XP-Axv" id="hOS-kc-zgM"/>
+                <outlet property="nameL" destination="Sgc-RQ-2EO" id="fPe-G0-AOW"/>
+                <outlet property="nameT" destination="Vt4-9f-wuA" id="nlj-az-klR"/>
                 <outlet property="photo" destination="dqx-js-sTo" id="TG5-IM-hz8"/>
-                <outlet property="text" destination="Vt4-9f-wuA" id="Y9b-Wm-oqr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -104,7 +106,7 @@
                 <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Fx-FVm">
                     <rect key="frame" x="256" y="101" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
