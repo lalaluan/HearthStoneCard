@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class MainTableViewController: UITableViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIGestureRecognizerDelegate {
 
     var photos = [Photo]()
     
@@ -18,6 +18,8 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     
     var photoToMake:UIImage = UIImage()
     
+    //@IBOutlet var Gesture: UILongPressGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,8 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         if let files = loadPhotos(){
             photos += files
         }
+        //Gesture.delegate = self
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -142,6 +146,16 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         self.presentViewController(nav, animated: true, completion: nil)
 
         return indexPath
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            photos.removeAtIndex(indexPath.row)
+            
+            savePhotos(photos.count)
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
     
     
@@ -263,5 +277,10 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     func loadPhotos() -> [Photo]? {
         return NSKeyedUnarchiver.unarchiveObjectWithFile(Photo.contentURL.path!) as? [Photo]
     }
+    
+    
+    
+    
+    
     
 }
