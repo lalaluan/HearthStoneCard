@@ -8,13 +8,15 @@
 
 import UIKit
 
-class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextViewDelegate {
 
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var card: UIImageView!
     @IBOutlet weak var life: UIImageView!
     @IBOutlet weak var magic: UIImageView!
     @IBOutlet weak var attack: UIImageView!
+    @IBOutlet weak var text: UITextField!
+    @IBOutlet weak var desc: UITextField!
     
     //var numbers = ["0","1","2","3","4","5","6","7","8","9"]
     var numbers:[UIImage] = []
@@ -45,6 +47,7 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         for i in 0...9{
             numbers.append(UIImage(named: String(i)+".png")!)
         }
+        
         
     }
 
@@ -105,6 +108,13 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
         canSave = false
     }
     
+    @IBAction func tapCard(sender: AnyObject) {
+        text.hidden = false
+        text.userInteractionEnabled = true
+        desc.hidden = false
+        desc.userInteractionEnabled = true
+        //text.setNeedsFocusUpdate()
+    }
     
     // MARK: - PickerView
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
