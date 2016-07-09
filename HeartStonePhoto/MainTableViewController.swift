@@ -45,7 +45,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         nav?.barStyle = UIBarStyle.Black
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
         imageView.contentMode = .ScaleAspectFit
-        let image = UIImage(named: "title")
+        let image = UIImage(named: "title.jpg")
         imageView.image = image
         
         nav?.setBackgroundImage(image, forBarMetrics:.Default)
