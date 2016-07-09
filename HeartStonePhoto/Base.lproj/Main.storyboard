@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="xLl-Jr-ege" id="inm-LC-sFe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="photos" id="bLV-Nr-weG">
+                    <navigationItem key="navigationItem" id="bLV-Nr-weG">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="QQ3-j9-0Ej">
                             <connections>
                                 <action selector="selectImageFromLibrary:" destination="xLl-Jr-ege" id="uJy-PV-oJL"/>

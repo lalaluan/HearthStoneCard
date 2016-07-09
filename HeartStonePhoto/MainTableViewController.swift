@@ -39,6 +39,20 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
         //tableView.registerNib(UINib(nibName: "Cell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
 
+    override func viewDidAppear(animated: Bool) {
+        let nav = self.navigationController?.navigationBar
+        
+        nav?.barStyle = UIBarStyle.Black
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        imageView.contentMode = .ScaleAspectFit
+        let image = UIImage(named: "title")
+        imageView.image = image
+        
+        nav?.setBackgroundImage(image, forBarMetrics:.Default)
+        
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
