@@ -98,12 +98,12 @@
                         <action selector="cancle:" destination="-1" eventType="touchUpInside" id="3Qo-LS-C3s"/>
                     </connections>
                 </button>
-                <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名称" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt4-9f-wuA">
+                <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="名称" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vt4-9f-wuA">
                     <rect key="frame" x="256" y="35" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                 </textField>
-                <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="描述" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Fx-FVm">
+                <textField hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="描述" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Soa-Fx-FVm">
                     <rect key="frame" x="256" y="101" width="97" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
@@ -121,7 +121,7 @@
                 <constraint firstItem="Sgc-RQ-2EO" firstAttribute="centerX" secondItem="vnA-iw-qgP" secondAttribute="centerX" id="Hcq-R5-JtB"/>
                 <constraint firstItem="oZF-XP-Axv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="93" id="JFI-u1-VsH"/>
                 <constraint firstItem="0SR-dh-qHx" firstAttribute="bottom" secondItem="vnA-iw-qgP" secondAttribute="bottom" constant="-17" id="N3C-Op-bN3"/>
-                <constraint firstItem="Vt4-9f-wuA" firstAttribute="leading" secondItem="oZF-XP-Axv" secondAttribute="leading" constant="20" id="Q4r-WI-HBe"/>
+                <constraint firstItem="Vt4-9f-wuA" firstAttribute="leading" secondItem="oZF-XP-Axv" secondAttribute="leading" constant="10" id="Q4r-WI-HBe"/>
                 <constraint firstAttribute="trailingMargin" secondItem="Soa-Fx-FVm" secondAttribute="trailing" constant="20" id="Rw9-dD-MXG"/>
                 <constraint firstItem="0SR-dh-qHx" firstAttribute="trailing" secondItem="vnA-iw-qgP" secondAttribute="trailing" constant="-35" id="XBC-7H-7vD"/>
                 <constraint firstItem="vnA-iw-qgP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XFx-yq-OCO"/>

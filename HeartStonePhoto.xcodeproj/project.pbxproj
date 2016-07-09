@@ -12,6 +12,8 @@
 		7C0D33A61D2BD84F00DFB580 /* 959.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C0D33A51D2BD84F00DFB580 /* 959.png */; };
 		7C4058031D30D8BB00352928 /* title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C4058021D30D8BB00352928 /* title.jpg */; };
 		7C4058071D30DB0300352928 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4058061D30DB0300352928 /* Main.storyboard */; };
+		7C4058091D30DCC600352928 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7C4058081D30DCC600352928 /* README.md */; };
+		7C40580F1D30E12400352928 /* 世界萨_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7C40580E1D30E12400352928 /* 世界萨_1.jpg */; };
 		7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */; };
 		7CBDF9961CFD6FBE0096A90C /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */; };
 		7CCB1A391CF43C300078421A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCB1A2F1CF43C300078421A /* AppDelegate.swift */; };
@@ -70,6 +72,8 @@
 		7C0D33A51D2BD84F00DFB580 /* 959.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 959.png; sourceTree = "<group>"; };
 		7C4058021D30D8BB00352928 /* title.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = title.jpg; sourceTree = "<group>"; };
 		7C4058061D30DB0300352928 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7C4058081D30DCC600352928 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7C40580E1D30E12400352928 /* 世界萨_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "世界萨_1.jpg"; sourceTree = "<group>"; };
 		7CBDF9931CFD6F610096A90C /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		7CBDF9951CFD6FBE0096A90C /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		7CCB1A2F1CF43C300078421A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		3A06A01F1CF34585005120B1 = {
 			isa = PBXGroup;
 			children = (
+				7C4058081D30DCC600352928 /* README.md */,
 				7CCB1A2E1CF43C300078421A /* HeartStonePhoto */,
 				3A06A03F1CF34586005120B1 /* HeartStonePhotoTests */,
 				3A06A04A1CF34586005120B1 /* HeartStonePhotoUITests */,
@@ -184,6 +189,7 @@
 				7CDF83381D2D24D90040AC89 /* 卡背.png */,
 				7C4058021D30D8BB00352928 /* title.jpg */,
 				7CDF83401D2D47380040AC89 /* life.png */,
+				7C40580E1D30E12400352928 /* 世界萨_1.jpg */,
 				7CDF83421D2D47830040AC89 /* 随从卡背.png */,
 				7CDF833C1D2D43A10040AC89 /* mag.png */,
 				7CE8D7F91D2E5F7000BA7277 /* 0.png */,
@@ -311,6 +317,7 @@
 				7CDF833D1D2D43A10040AC89 /* mag.png in Resources */,
 				7C4058071D30DB0300352928 /* Main.storyboard in Resources */,
 				7CCB1A3A1CF43C300078421A /* Assets.xcassets in Resources */,
+				7C40580F1D30E12400352928 /* 世界萨_1.jpg in Resources */,
 				7CE8D8071D2E5F7000BA7277 /* 4.png in Resources */,
 				7CDF833F1D2D458B0040AC89 /* attack.png in Resources */,
 				7C4058031D30D8BB00352928 /* title.jpg in Resources */,
@@ -359,6 +366,7 @@
 				7CFBD7371D00629600CAE755 /* PendingOperations.swift in Sources */,
 				7CDF83361D2D147C0040AC89 /* CardViewController.swift in Sources */,
 				7CBDF9941CFD6F610096A90C /* MainTableViewController.swift in Sources */,
+				7C4058091D30DCC600352928 /* README.md in Sources */,
 				7CFBD7351D004A7F00CAE755 /* Photo.swift in Sources */,
 				7CD23D731D06CECB0078290E /* DetailViewController.swift in Sources */,
 			);

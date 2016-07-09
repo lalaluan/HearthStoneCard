@@ -165,15 +165,16 @@ class CardViewController: UIViewController,UIPickerViewDelegate,UIPickerViewData
     func textFieldDidEndEditing(textField: UITextField) {
         nameL.text = nameT.text
         descL.text = desc.text
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         nameT.hidden = true
         nameT.userInteractionEnabled = false
         desc.hidden = true
         desc.userInteractionEnabled = false
-        canSave = true
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        canSave = true
         return true
     }
     
